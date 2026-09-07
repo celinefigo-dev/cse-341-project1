@@ -1,0 +1,5 @@
+### Home route
+GET http://localhost:3000/
+
+### Contacts route
+GET http://localhost:3000/contacts
