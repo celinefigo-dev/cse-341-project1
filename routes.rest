@@ -1,5 +1,15 @@
 ### Home route
 GET http://localhost:3000/
 
-### Contacts route
+### Get all Contacts
 GET http://localhost:3000/contacts
+
+### Get one contact
+GET http://localhost:3000/contacts/6a9f00d560776360e253a066
+
+
+### RENDER - Get all contacts
+GET https://cse-341-project1-t0e6.onrender.com/contacts
+
+### RENDER - Get one contact
+GET https://cse-341-project1-t0e6.onrender.com/contacts/6a9f013160776360e253a06a
