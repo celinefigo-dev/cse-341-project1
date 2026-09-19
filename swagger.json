@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   "host": "cse-341-project1-t0e6.onrender.com",
-  "basePath": "/",
+  "basePath": "/contacts",
   "schemes": [
     "http"
   ],
