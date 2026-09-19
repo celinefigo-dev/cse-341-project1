@@ -1,7 +1,7 @@
 {
   "name": "cse-341-project1",
   "version": "1.0.0",
-   "description": "CSE 341 Contacts REST API",
+  "description": "CSE 341 Contacts REST API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/celinefigo-dev/cse-341-project1#readme",
   "dependencies": {
+    "body-parser": "^2.3.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongodb": "^7.6.0",
