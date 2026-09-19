@@ -39,7 +39,52 @@ const getSingle = async (req, res) => {
   }
 };
 
+// Week 2 Assignment //
+// POST - Create a contact
+const createContact = async (req, res) => {
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
+  };
+
+  const response = await mongodb.getDatabase().collection("contacts").insertOne(contact);
+
+  res.status(201).json({ id: response.insertedId });
+};
+
+// PUT - Update a contact
+const updateContact = async (req, res) => {
+  const contactId = new ObjectId(req.params.id);
+
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
+  };
+
+  await mongodb.getDatabase().collection("contacts").replaceOne({ _id: contactId }, contact);
+
+  res.status(204).send();
+};
+
+// DELETE - Remove a contact
+const deleteContact = async (req, res) => {
+  const contactId = new ObjectId(req.params.id);
+
+  await mongodb.getDatabase().collection("contacts").deleteOne({ _id: contactId });
+
+  res.status(204).send();
+};
+
 module.exports = {
   getAll,
-  getSingle
+  getSingle,
+  createContact,
+  updateContact,
+  deleteContact
 };
